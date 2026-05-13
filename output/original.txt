@@ -1,0 +1,5 @@
+Programar en C permite un control preciso sobre la memoria y el sistema.
+Las estructuras como vectores y punteros son clave en este lenguaje.
+Con C se pueden crear desde algoritmos simples hasta sistemas complejos.
+Es ideal para aprender bases sólidas de lógica y estructura de código.
+Compilar y depurar en C ayuda a entender cómo piensa una computadora.
