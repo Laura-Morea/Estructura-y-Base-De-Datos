@@ -19,9 +19,9 @@ int main(int argc, char const *argv[])
         printf("Registros (Nombre y edad) del archivo binario \n\n");
 
         fread(&persona,sizeof(Registro),1,archivo);//lectura adelantada para ver si existe algún registro antes de imprimir
-
-        while(!feof(archivo)){
-            printf("Nombre: %s, Edad: %s\n", persona.nombre, persona.edad);
+        
+        while(!(feof(archivo))){
+            printf("Nombre: %s, Edad: %d\n", persona.nombre, persona.edad);
             fread(&persona,sizeof(Registro),1,archivo);
         }
         fclose(archivo);

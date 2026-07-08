@@ -1,0 +1,91 @@
+/*  scanf("%2d", &ca);
+    printf("%.2d", ca); */
+
+// typedef char cadena[160];
+// int esPar = (num % 2 == 0) ? 1 : 0;
+// int cant = (sizeof(files_) / sizeof(files_[0]));
+// static const char *decision[] = {"alta_ambulatoria", "internación"};
+
+===============
+//DESCUENTOS...
+//0.n || 0.0n (para sacar el porcentaje que se busca de un valor)
+===============
+/*	precio -= precio * (descuento / 100); */
+===============
+
+===================
+//FORMATO (IDEA)...
+/*	cadena formato = "%-10s %-6d %-8d %-8s $%-10.2f\n"; */
+===================
+
+===========
+//BUSCAR...
+/* Persona buscarPersona(int dniBuscado){
+	int i= 0;
+	Persona supuesta= {0, NOT_EXIST, {NOT_EXIST, 0, NOT_EXIST}};
+
+	while(i < CANT_PERSONAS && dniBuscado != personas[i].dni) i++;
+	if(i < CANT_PERSONAS) supuesta= personas[i];
+return supuesta;
+} */
+===========
+
+===========================
+//PARA RESPECTO A VECTOR...
+/* int indexDelBarrio(char* barrios, char* buscado){
+	int i= CANT_BARRIOS-1;
+	while(i >= 0 && strcmp(barrios[i], buscado) != 0) i--;
+return i;
+} */
+===========================
+
+
+=================================================================================
+=================================================================================
+
+
+================
+//CAMBIO_RUTA...
+/*	Archivo copia = {"", "w", NULL};
+	strcpy(copia.ruta, original.ruta);
+  	agregarAlgoALaRuta(copia.ruta, "_MAYUS");
+	if(openF(&copia)) closeF(copia); */
+================
+
+=========================
+//PASAR_ENTRE_ARCHIVOS...
+/* void irPasandoElMensaje(FILE* original, FILE* destino){
+		char renglon[CHARS_PER_LINE];
+		while(fgets(renglon, CHARS_PER_LINE, original) != NULL) fputs(renglon, destino);
+    		rewind(original);
+     		rewind(destino);
+} */
+=========================
+
+========================
+//CARGAR_E_IR_PASANDO...
+/* void cargar(FILE *fp){
+    char str_[CHARS_PER_LINE];
+    printf( "\nIngrese el texto (una linea por [ENTER]).
+    		"\nPara finalizar presione [Ctrl] + [Z] (EOF) y luego [ENTER]:\n\n");
+
+    while(fgets(str_, CHARS_PER_LINE, stdin) != NULL) fputs(str_, fp);
+} */
+========================
+/*  printf("\nIngrese caracteres hasta [Enter].\n\n");
+	while((ch = getchar()) != '\n') putc(ch, fp); */
+========================
+
+
+=================================================================================
+=================================================================================
+
+
+=================
+//ORDENAMIENTO...
+/* int compararEnteros(const void *a, const void *b){
+return(*(int *)a - *(int *)b);
+}
+=================
+qsort(vec, n, sizeof(int), compararEnteros); */
+=================

@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
     FILE *archivo;
     char tecla;
 
-    archivo = fopen("datos.dat","wb");
+    archivo = fopen("datos.dat","ab");
     // "ab"= append binary: agrega al final sin borrar datos previos
 
     if(archivo!=NULL){
@@ -27,7 +27,7 @@ int main(int argc, char const *argv[])
                 scanf("%d",&(persona.edad));
 
                 //Dir. variable| tamaño struct | 1 registro | archivo
-                fwrite(&persona, sizeof(persona),1,archivo);
+                fwrite(&persona, sizeof(Registro),1,archivo);
 
                 printf("\nDesea continuar (s/n): ");
                 fflush(stdin);
