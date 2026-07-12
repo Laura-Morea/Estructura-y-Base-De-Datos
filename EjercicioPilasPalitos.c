@@ -234,11 +234,12 @@ char* jugarVSCPU(nodo** p,int turno){
 void jugarTurno(nodo** p, int turno){
     int cant;
     int total=contarPila(*p);
+    int maximoASacar=turno<total?turno:total-1;
     listarPila(*p);
     printf("Indicar la cantidad de palitos a retirar:");
     scanf("%d",&cant);
-    while(cant<1||cant>(turno<total?turno:total)){
-        printf("El valor a retirar debe estar entre 1 y %d\n",(turno<total?turno:total-1));
+    while(cant<1||cant>maximoASacar){
+        printf("El valor a retirar debe estar entre 1 y %d\n",maximoASacar);
         printf("Indicar la cantidad de palitos a retirar:");
         scanf("%d",&cant);
     }
